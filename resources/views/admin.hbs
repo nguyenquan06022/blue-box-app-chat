@@ -1,10 +1,10 @@
 <div class="container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
     <button type="button" class="btn btn-primary">Clear Messages</button>
 </div>
-<script src="socket.io/socket.io.js"></script>
+<script src="https://blue-box-app-chat-demo62.onrender.com/socket.io/socket.io.js"></script>
 <script>
     window.onload = function() {
-        const socket = io("/admin62")
+        const socket = io("https://blue-box-app-chat-demo62.onrender.com/admin62")
         let clearBtn = document.querySelector('.btn')
         clearBtn.onclick = function() {
             socket.emit('clearMes')

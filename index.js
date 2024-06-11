@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const { engine } = require('express-handlebars');
-const port = 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server, {
@@ -23,7 +23,7 @@ app.set('view engine', 'hbs');
 app.set('views', './resources/views');
 
 server.listen(port, function () {
-    console.log(`Đang lắng nghe tại http://localhost:${port}`);
+    console.log(`Đang lắng nghe tại port:${port}`);
 });
 
 app.get("/", function (req, res) {

@@ -13,11 +13,10 @@
     </div>
     </div>
 </div>
-<script src="socket.io/socket.io.js"></script>
+<script src="https://blue-box-app-chat-demo62.onrender.com/socket.io/socket.io.js"></script>
 <script>
     window.onload = function() {
-        const socket = io("http://localhost:3000/") 
-        
+        const socket = io("https://blue-box-app-chat-demo62.onrender.com") 
         let registerForm = document.querySelector('#registerForm')
         let username = document.querySelector('#username')
         let error = document.querySelector("#error")
